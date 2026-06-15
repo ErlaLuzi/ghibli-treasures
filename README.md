@@ -1,4 +1,4 @@
-# Ghibli Treasures
+# Ghibli Treasures June 2025 Web Technologies Course Project
 
 Ghibli Treasures is a small PHP and MySQL storefront for Studio Ghibli-inspired merchandise. It includes a public home page, searchable shop, session-based cart, simulated checkout, contact form, user authentication, and admin screens for managing products and users.
 
