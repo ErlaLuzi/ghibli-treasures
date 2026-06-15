@@ -1,0 +1,161 @@
+:root {
+    --admin-bg: #f6f8f3;
+    --admin-surface: #ffffff;
+    --admin-surface-soft: #edf4ec;
+    --admin-border: #d8e3d4;
+    --admin-text: #203329;
+    --admin-muted: #66766d;
+    --admin-primary: #2f7d6f;
+    --admin-primary-dark: #245f55;
+    --admin-danger: #b94646;
+    --admin-shadow: 0 14px 34px rgba(32, 51, 41, 0.1);
+}
+
+body {
+    margin: 0;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: Arial, sans-serif;
+}
+
+main.admin-panel {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 32px 0 56px;
+}
+
+h1 {
+    margin: 0 0 24px;
+    color: var(--admin-text);
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.success-msg,
+.error-msg {
+    border-radius: 8px;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    font: 700 14px Arial, sans-serif;
+}
+
+.success-msg {
+    background: #e5f5e4;
+    border: 1px solid #b9dcb8;
+    color: #245f35;
+}
+
+.error-msg {
+    background: #fdeaea;
+    border: 1px solid #efbaba;
+    color: #8a2d2d;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    background: var(--admin-surface);
+    box-shadow: var(--admin-shadow);
+}
+
+.admin-table th,
+.admin-table td {
+    border-bottom: 1px solid var(--admin-border);
+    padding: 16px 14px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table th {
+    background: var(--admin-surface-soft);
+    color: var(--admin-text);
+    font: 700 13px Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.admin-table td {
+    background: #fff;
+    color: var(--admin-text);
+    font-size: 14px;
+}
+
+.admin-table td:first-child,
+.admin-table th:first-child {
+    width: 56px;
+    text-align: center;
+}
+
+.admin-table td:nth-child(2) {
+    font-weight: 700;
+}
+
+.admin-table td:nth-child(5) {
+    color: var(--admin-muted);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.admin-table form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.admin-table button {
+    border: 0;
+    border-radius: 6px;
+    background: var(--admin-primary);
+    color: #fff;
+    cursor: pointer;
+    font: 700 13px Arial, sans-serif;
+    min-height: 38px;
+    padding: 9px 12px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-table button:hover {
+    background: var(--admin-primary-dark);
+    transform: translateY(-1px);
+}
+
+.admin-table button[value='delete'] {
+    background: var(--admin-danger);
+}
+
+.admin-table button[value='delete']:hover {
+    background: #963737;
+}
+
+.admin-table em {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    border-radius: 999px;
+    background: #edf4ec;
+    color: var(--admin-muted);
+    font: 700 13px Arial, sans-serif;
+    padding: 0 12px;
+}
+
+@media (max-width: 820px) {
+    main.admin-panel {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+        overflow-x: auto;
+    }
+
+    .admin-table {
+        min-width: 760px;
+    }
+}
